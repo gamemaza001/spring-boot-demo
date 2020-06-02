@@ -1,0 +1,17 @@
+version: "3.6"
+services:
+  spring-docker:
+    image: tanakorngame/spring-boot:v1
+    ports:
+      - 8090:8080
+    networks:
+      - default
+  spring-docker-two:
+    image: tanakorngame/spring-boot:v3
+    ports:
+      - 8091:8080
+    networks:
+      - default
+networks:
+  default:
+    driver: bridge
